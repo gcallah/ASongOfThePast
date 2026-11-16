@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# Print a range of paragraphs from the novel's manuscript as HTML <p> elements,
+# ready to paste into the "Read an excerpt" section of index.html.
+#
+# Usage: bin/excerpt-to-html MANUSCRIPT START_LINE END_LINE
+#   MANUSCRIPT  a .docx (converted with macOS textutil) or a plain .txt file
+#   START_LINE  first line (paragraph) to include, 1-based
+#   END_LINE    last line (paragraph) to include
+#
+# Line numbers count paragraphs in the plain-text conversion, so find them with:
+#   textutil -convert txt -stdout MANUSCRIPT | grep -n "some phrase"
+set -euo pipefail
+
+if [[ $# -ne 3 ]]; then
+  echo "usage: $0 MANUSCRIPT START_LINE END_LINE" >&2
+  exit 1
+fi
+
+manuscript="$1"
+start_line="$2"
+end_line="$3"
+
+# Convert to plain text when given a Word document.
+if [[ "$manuscript" == *.docx ]]; then
+  text="$(textutil -convert txt -stdout "$manuscript")"
+else
+  text="$(cat "$manuscript")"
+fi
+
+# Escape HTML special characters and wrap each non-blank paragraph in <p>.
+printf '%s\n' "$text" \
+  | sed -n "${start_line},${end_line}p" \
+  | sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' \
+  | awk 'NF { sub(/[ \t]+$/, ""); print "<p>" $0 "</p>" }'
