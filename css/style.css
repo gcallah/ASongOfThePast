@@ -330,7 +330,7 @@ footer .piece { color: var(--amber); font-size: 1.4rem; display: block; margin-b
 .section-head h2 em { font-style: italic; color: var(--amber); }
 
 /* real cover image, once one exists */
-.cover-img { width: 100%; max-width: 22rem; justify-self: center; box-shadow: 0 2rem 4rem rgba(0,0,0,0.55); transform: rotate(-1.5deg); }
+.cover-img { width: 100%; max-width: 22rem; justify-self: center; box-shadow: 0 2rem 4rem rgba(0,0,0,0.55); }
 
 /* ---------- Footer credits ---------- */
 .credits { max-width: 46rem; margin: 1rem auto 0; text-align: left; }
@@ -348,3 +348,6 @@ footer .piece { color: var(--amber); font-size: 1.4rem; display: block; margin-b
 .text-tile .tile-kicker { font-family: var(--caps); letter-spacing: 0.2em; color: var(--amber); font-size: 0.9rem; margin: 0; text-transform: lowercase; }
 .text-tile h3 { font-family: var(--display); font-weight: 500; color: var(--paper); font-size: 2rem; margin: 0.2rem 0 0.6rem; }
 .text-tile p { margin: 0; color: var(--mist); font-size: 0.98rem; line-height: 1.55; }
+/* the cover file is small (260x337), so cap it near its native size to keep it crisp */
+.hero .cover-img { max-width: 17rem; height: auto; transform: none; }
+@media (max-width: 860px) { .hero .cover-img { order: -1; max-width: 14rem; margin: 0 auto; } }
