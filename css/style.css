@@ -351,3 +351,7 @@ footer .piece { color: var(--amber); font-size: 1.4rem; display: block; margin-b
 /* the cover file is small (260x337), so cap it near its native size to keep it crisp */
 .hero .cover-img { max-width: 17rem; height: auto; transform: none; }
 @media (max-width: 860px) { .hero .cover-img { order: -1; max-width: 14rem; margin: 0 auto; } }
+/* full-width banner photo at the foot of the gallery */
+.photo.full { grid-column: 1 / -1; }
+.photo.full img { aspect-ratio: 3 / 1; min-height: 14rem; }
+@media (max-width: 560px) { .photo.full img { aspect-ratio: 4 / 3; } }
