@@ -17,8 +17,6 @@ and select `main` / `(root)`. The site updates on every push to `main`.
 
 - **Excerpts:** `bin/excerpt-to-html MANUSCRIPT.docx START END` prints a range of
   manuscript paragraphs as HTML `<p>` tags to paste into the excerpt section.
-- **Author bio:** an interim version adapted from the VoegelinView author page; to be
-  expanded (search `index.html` for `TODO`).
 - **Cover:** `graphics/cover.jpg` is small (260×337); a higher-resolution file can
   replace it to show the cover larger.
 - **Order link:** the Amazon listing, set on the `#order-link` button in `index.html`.
