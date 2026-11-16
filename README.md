@@ -17,8 +17,12 @@ and select `main` / `(root)`. The site updates on every push to `main`.
 
 - **Excerpts:** `bin/excerpt-to-html MANUSCRIPT.docx START END` prints a range of
   manuscript paragraphs as HTML `<p>` tags to paste into the excerpt section.
-- **Still to fill in** (search `index.html` for `TODO`): the author bio, the order link,
-  and a photo of St. Aedan's Church in Westville (marked `[*image*]`).
+- **Author bio:** an interim version adapted from the VoegelinView author page; to be
+  expanded (search `index.html` for `TODO`).
+- **Still to fill in:** a photo of St. Aedan's Church in Westville (marked `[*image*]`
+  in `index.html`; save it as `graphics/st-aedans-westville.jpg`), and optionally a
+  higher-resolution cover to replace `graphics/cover.jpg` (currently 260×337).
+- **Order link:** the Amazon listing, set on the `#order-link` button in `index.html`.
 
 ## Local preview
 
