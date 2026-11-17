@@ -68,8 +68,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .site-nav ul::-webkit-scrollbar { display: none; }
 .site-nav a.navlink {
-  font-family: var(--caps); letter-spacing: 0.06em; font-size: 1rem;
-  color: var(--granite); text-decoration: none; white-space: nowrap;
+  font-family: var(--caps); letter-spacing: 0.06em; font-size: 1.15rem; font-weight: 500;
+  color: var(--mist); text-decoration: none; white-space: nowrap;
 }
 .site-nav a.navlink:hover { color: var(--amber); }
 @media (max-width: 720px) {
