@@ -221,8 +221,8 @@ section + section { border-top: 1px solid rgba(255,255,255,0.05); }
 .square blockquote cite { display: block; font-style: normal; font-family: var(--caps); letter-spacing: 0.05em; color: var(--amber-dim); margin-top: 0.3rem; font-size: 0.85rem; }
 
 /* ---------- Characters ---------- */
-.cast { display: grid; gap: 1.5rem 2.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
-.person { border-top: 1px solid var(--rule); padding-top: 1rem; }
+.cast, .reviews { display: grid; gap: 1.5rem 2.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
+.person, .review { border-top: 1px solid var(--rule); padding-top: 1rem; }
 .person h3 { font-family: var(--display); font-size: 1.6rem; font-weight: 500; color: var(--paper); margin: 0; line-height: 1.15; }
 .person .role { font-family: var(--caps); letter-spacing: 0.08em; color: var(--amber); font-size: 0.95rem; margin: 0.15rem 0 0.5rem; }
 .person p { margin: 0; color: var(--mist); }
@@ -267,6 +267,16 @@ section + section { border-top: 1px solid rgba(255,255,255,0.05); }
   max-width: 46rem; margin: 0 auto;
 }
 .band cite { display: block; margin-top: 1.2rem; font-family: var(--caps); font-style: normal; letter-spacing: 0.18em; color: var(--amber); font-size: 1rem; }
+
+/* ---------- Readers' reactions ---------- */
+.reviews { row-gap: 2rem; align-items: start; }
+.review { margin: 0; }
+.reviews-more { text-align: center; margin: 2.5rem 0 0; font-family: var(--caps); letter-spacing: 0.08em; }
+.review-title { font-family: var(--display); font-size: 1.45rem; font-weight: 500; color: var(--paper); line-height: 1.2; margin: 0 0 0.75rem; }
+.review blockquote { margin: 0; font-family: var(--display); font-style: italic; font-size: 1.15rem; line-height: 1.5; color: var(--mist); }
+.review blockquote p { margin: 0 0 0.8em; }
+.review figcaption { font-family: var(--caps); letter-spacing: 0.1em; color: var(--amber); font-size: 1rem; }
+.review figcaption::before { content: "— "; }
 
 /* ---------- Author / buy / signup ---------- */
 .two-col { display: grid; gap: clamp(2rem, 5vw, 4rem); grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); align-items: start; }
